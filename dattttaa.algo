@@ -1,0 +1,60 @@
+ALGORITHM probleme1
+VAR
+    tab1,tab2 : ARRAY_OF INTEGER[8];
+    SUM:INTEGER:=0
+    I,J:INTEGER
+    exist:BOOLEAN
+BEGIN
+    FOR i FROM 0 TO tab1.length STEP 1  DO
+        write("tab1")
+        read(tab1[i])
+
+            
+    END_FOR
+    FOR j FROM 0 TO tab2.length STEP 1 DO
+        write("tab2")
+        read(tab2[j])
+
+    END_FOR
+    FOR i FROM 0 TO tab1.length STEP 1  DO
+        exist:=false
+        FOR j FROM 0 TO tab2.length STEP 1 DO
+            IF (tab1[i]=tab2[j]) THEN
+                exist=:true
+            END_IF
+
+        END_FOR
+        IF (exist=false) THEN
+            sum=:sum+tab1[i]
+        
+            
+        END_IF
+     FOR j FROM 0 TO tab2.length STEP 1  DO
+        exist:=false
+        FOR i FROM 0 TO tab1.length STEP 1 DO
+            IF (tab1[i]=tab2[j]) THEN
+                exist=:true
+            END_IF
+
+        END_FOR
+        IF (exist=false) THEN
+            sum:=sum+tab2[j]
+        
+            
+        END_IF   
+            
+        
+            
+        
+        
+    END_FOR
+   
+
+    write(sum)
+
+END
+
+    
+
+
+
